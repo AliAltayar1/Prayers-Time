@@ -1,0 +1,217 @@
+/* Start Variables */
+:root {
+  --darkBlue: #142850;
+  --blue: #27496d;
+  --lightBlue: #0c7b93;
+  --lighterBlue: #00a8cc;
+  --lightGray: rgb(245, 246, 250);
+}
+/* End Variables */
+
+/* Start Format */
+input:focus {
+  outline: none;
+}
+/* End Format */
+
+/* Start Reusable Style */
+.container {
+  padding: 0 200px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+/* End Reusable Style */
+
+.main-page {
+  background-color: var(--lightGray);
+}
+
+/* Start Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: var(--darkBlue);
+  color: var(--lighterBluevariables);
+}
+
+.main-header .burger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  transition: 0.2s;
+}
+
+.main-header .burger-icon:hover {
+  background-color: var(--blue);
+}
+
+.main-header .burger-icon span {
+  width: 30px;
+  height: 4px;
+  margin-top: 3px;
+  background-color: var(--lighterBlue);
+}
+
+.main-header h3,
+.main-header .lang {
+  color: var(--lighterBlue);
+}
+
+.main-header .lang {
+  margin-right: 10px;
+}
+/* End Header */
+
+/* Start Search */
+.search {
+  background-color: white;
+  padding: 10px;
+  overflow: hidden;
+}
+.search h1 {
+  color: var(--blue);
+}
+
+.search .search-by-country label,
+.search .search-by-city label {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.search .search-by-country select,
+.search .search-by-city select {
+  padding: 3px 5px;
+  font-weight: 600;
+  color: var(--blue);
+  border-radius: 8px;
+  transition: 0.1s;
+}
+.search .search-by-country select:focus,
+.search .search-by-city select:focus {
+  outline: none;
+  border: 2px solid var(--blue);
+}
+.search .search-by-country select option,
+.search .search-by-city select option {
+  font-weight: 600;
+}
+/* End Search */
+
+/* Start Body */
+.body {
+  background-color: white;
+  padding: 15px 25px;
+  margin-top: 20px;
+  text-align: start;
+}
+
+.body h2 {
+  margin: 0 0 10px 0;
+  color: var(--lighterBlue);
+}
+.body span {
+  color: var(--lighterBlue);
+  font-weight: 500;
+}
+
+.body .prayers-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Start Time Left */
+.time-left-container {
+  background-color: var(--darkBlue);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.time-left-container .prayer-name {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--lightBlue);
+}
+
+.time-left-container .time-left span {
+  font-size: 50px;
+  font-weight: 700;
+}
+.time-left-container p {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--lightBlue);
+  margin-top: 10px;
+}
+/* End Time Left */
+
+/* Start Prayer Time */
+.prayer-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  padding: 15px;
+  border-top: 3px solid var(--darkBlue);
+  border-bottom: 3px solid var(--darkBlue);
+  border-radius: 8px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 150px;
+  margin: 25px 5px;
+}
+.prayer-time:first-child {
+  margin-left: 0;
+}
+.prayer-time:last-child {
+  margin-right: 0;
+}
+.prayer-time .icon {
+  color: var(--lighterBlue);
+}
+/* End Prayer Time */
+
+/* Start Current Time */
+.current-time {
+  text-align: center;
+}
+.current-time span {
+  display: block;
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--lightBlue);
+}
+.current-time p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--lightBlue);
+}
+
+/* End Current Time */
+
+/* @media (max-width: 768px) {
+  
+} */
+
+/* End Body */
