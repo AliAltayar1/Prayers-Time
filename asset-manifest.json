@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AliAltayar1/Prayers-Time/static/css/main.d400ee7b.css",
+    "main.js": "/AliAltayar1/Prayers-Time/static/js/main.f1c96747.js",
+    "static/js/787.ba73d243.chunk.js": "/AliAltayar1/Prayers-Time/static/js/787.ba73d243.chunk.js",
+    "index.html": "/AliAltayar1/Prayers-Time/index.html",
+    "main.d400ee7b.css.map": "/AliAltayar1/Prayers-Time/static/css/main.d400ee7b.css.map",
+    "main.f1c96747.js.map": "/AliAltayar1/Prayers-Time/static/js/main.f1c96747.js.map",
+    "787.ba73d243.chunk.js.map": "/AliAltayar1/Prayers-Time/static/js/787.ba73d243.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d400ee7b.css",
+    "static/js/main.f1c96747.js"
+  ]
+}
