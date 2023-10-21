@@ -4,15 +4,15 @@ import "../../App.css";
 export default function TimeLeft({ nextPrayer, timeLeft }) {
   const totalSeconds = Math.floor(timeLeft / 1000);
   const hours =
-    Math.floor(totalSeconds / 3600) > 10
+    Math.floor(totalSeconds / 3600) >= 10
       ? Math.floor(totalSeconds / 3600)
       : "0" + Math.floor(totalSeconds / 3600);
   const minutes =
-    Math.floor((totalSeconds % 3600) / 60) > 10
+    Math.floor((totalSeconds % 3600) / 60) >= 10
       ? Math.floor((totalSeconds % 3600) / 60)
       : "0" + Math.floor((totalSeconds % 3600) / 60);
   const seconds =
-    totalSeconds % 60 > 10 ? totalSeconds % 60 : "0" + (totalSeconds % 60);
+    totalSeconds % 60 >= 10 ? totalSeconds % 60 : "0" + (totalSeconds % 60);
 
   return (
     <div className="time-left-container">
