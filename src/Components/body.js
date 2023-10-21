@@ -38,7 +38,7 @@ export default function Body({ selectedCountry, selectedCity }) {
   useEffect(() => {
     async function fetchPrayerTime() {
       const response = await axios.get(
-        ` http://api.aladhan.com/v1/calendarByCity/${currentYear}/${currentMonth}?city=${
+        ` https://api.aladhan.com/v1/calendarByCity/${currentYear}/${currentMonth}?city=${
           selectedCountry ? selectedCountry : "AE"
         }&country=${selectedCity ? selectedCity : "Abu Dhabi"}`
       );
