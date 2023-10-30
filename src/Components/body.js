@@ -38,12 +38,12 @@ export default function Body({ selectedCountry, selectedCity }) {
   useEffect(() => {
     async function fetchPrayerTime() {
       const response = await axios.get(
-        ` https://api.aladhan.com/v1/calendarByCity/${currentYear}/${currentMonth}?city=${
-          selectedCountry ? selectedCountry : "AE"
-        }&country=${selectedCity ? selectedCity : "Abu Dhabi"}`
+        ` https://api.aladhan.com/v1/calendarByCity/${currentYear}/${currentMonth}?city=${selectedCity}&country=${selectedCountry}`
       );
+      // Store The Data in data var
       const data = response.data.data;
       for (let i = 0; i < response.data.data.length; i++) {
+        // Looping on all data days to found the correct day and fill the prayer time information
         if (
           Date1.getDate() === parseInt(response.data.data[i].date.gregorian.day)
         ) {
@@ -56,6 +56,7 @@ export default function Body({ selectedCountry, selectedCity }) {
             isha: response.data.data[i].timings.Isha.slice(0, 5),
           };
 
+          // set the object for my state
           setPrayerTimes(apiPrayerTimes);
 
           break;
@@ -96,7 +97,7 @@ export default function Body({ selectedCountry, selectedCity }) {
 
       for (const prayer in prayerTimesInMilli) {
         if (prayerTimesInMilli.hasOwnProperty(prayer)) {
-          // Check The Time Now If Befor Mid Or After And Calc The Fajr Time Left Depend On The Condition
+          // Check The Time Now If Before Mid Or After And Calc The Fajr Time Left Depend On The Condition
           if (prayer == "fajrInMilli") {
             if (+timeNow.slice(0, 2) < 24) {
               newTimeLeft[prayer] = fajrTimeBeforeMidInMill - timeNowInMilli;
